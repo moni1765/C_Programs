@@ -1,20 +1,17 @@
-#include <stdio.h>
-void main() {
-    int n1, n2, n3;
-    printf("Enter three different numbers: ");
-    scanf("%d %d %d", &n1, &n2, &n3);
+#include<stdio.h>
+int main()
+{
+   int num1,num2,num3;
+   
+   printf("\nEnter value of num1, num2 and num3:");
+   
+   scanf("%d %d %d",&num1,&num2,&num3);
 
-    // if n1 is greater than both n2 and n3, n1 is the largest
-    if (n1 >= n2 && n1 >= n3)
-        printf("%d is the largest number.", n1);
-
-    // if n2 is greater than both n1 and n3, n2 is the largest
-    if (n2 >= n1 && n2 >= n3)
-        printf("%d is the largest number.", n2);
-
-    // if n3 is greater than both n1 and n2, n3 is the largest
-    if (n3 >= n1 && n3 >= n2)
-        printf("%d is the largest number.", n3);
-
-    
+   if((num1>num2)&&(num1>num3))
+      printf("\n Number1 is greatest");
+   else if((num2>num3)&&(num2>num1))
+      printf("\n Number2 is greatest");
+   else
+      printf("\n Number3 is greatest");
+   return 0;
 }
